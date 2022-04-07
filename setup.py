@@ -20,7 +20,7 @@ from os.path import dirname, join
 
 from setuptools import find_packages, setup
 
-VERSION = (7, 4, 0)
+VERSION = (7, 10, 0)
 __version__ = VERSION
 __versionstr__ = ".".join(map(str, VERSION))
 
@@ -31,7 +31,7 @@ f.close()
 install_requires = [
     "six",
     "python-dateutil",
-    "elasticsearch7",
+    "elasticsearch7==7.10",
     # ipaddress is included in stdlib since python 3.3
     'ipaddress; python_version<"3.3"',
 ]
@@ -41,7 +41,7 @@ develop_requires = [
     "pytest>=3.0.0",
     "pytest-cov",
     "pytest-mock<3.0.0",
-    "pytz",
+    "pytz", 
     "coverage<5.0.0",
     "sphinx",
     "sphinx_rtd_theme",
