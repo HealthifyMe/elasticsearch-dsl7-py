@@ -20,7 +20,7 @@ from os.path import dirname, join
 
 from setuptools import find_packages, setup
 
-VERSION = (7, 4, 0)
+VERSION = (7, 10, 0)
 __version__ = VERSION
 __versionstr__ = ".".join(map(str, VERSION))
 
@@ -31,7 +31,7 @@ f.close()
 install_requires = [
     "six",
     "python-dateutil",
-    "elasticsearch>=7.0.0,<8.0.0",
+    "elasticsearch7==7.10",
     # ipaddress is included in stdlib since python 3.3
     'ipaddress; python_version<"3.3"',
 ]
@@ -41,17 +41,17 @@ develop_requires = [
     "pytest>=3.0.0",
     "pytest-cov",
     "pytest-mock<3.0.0",
-    "pytz",
+    "pytz", 
     "coverage<5.0.0",
     "sphinx",
     "sphinx_rtd_theme",
 ]
 
 setup(
-    name="elasticsearch-dsl",
-    description="Python client for Elasticsearch",
+    name="elasticsearch-dsl7",
+    description="Python client for Elasticsearch: forked by Healthifyme",
     license="Apache-2.0",
-    url="https://github.com/elasticsearch/elasticsearch-dsl-py",
+    url="https://github.com/HealthifyMe/elasticsearch-dsl-py.git",
     long_description=long_description,
     long_description_content_type="text/x-rst",
     version=__versionstr__,

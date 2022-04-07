@@ -22,7 +22,7 @@ except ImportError:
 
 from fnmatch import fnmatch
 
-from elasticsearch.exceptions import NotFoundError, RequestError
+from elasticsearch7.exceptions import NotFoundError, RequestError
 from six import add_metaclass, iteritems
 
 from .connections import get_connection
@@ -189,7 +189,7 @@ class Document(ObjectBase):
     @classmethod
     def get(cls, id, using=None, index=None, **kwargs):
         """
-        Retrieve a single document from elasticsearch using its ``id``.
+        Retrieve a single document from elasticsearch7 using its ``id``.
 
         :arg id: ``id`` of the document to be retrieved
         :arg index: elasticsearch index to use, if the ``Document`` is
@@ -208,7 +208,7 @@ class Document(ObjectBase):
     @classmethod
     def exists(cls, id, using=None, index=None, **kwargs):
         """
-        check if exists a single document from elasticsearch using its ``id``.
+        check if exists a single document from elasticsearch7 using its ``id``.
 
         :arg id: ``id`` of the document to check if exists
         :arg index: elasticsearch index to use, if the ``Document`` is
